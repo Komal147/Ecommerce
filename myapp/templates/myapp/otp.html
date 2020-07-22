@@ -1,0 +1,106 @@
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>winter</title>
+    <link rel="icon" href="{% static 'myapp/image/favicon.png' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.min.css' %}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'myapp/css/animate.css' %}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'myapp/css/owl.carousel.min.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'myapp/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/nice-select.css' %}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'myapp/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/themify-icons.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'myapp/css/magnific-popup.css' %}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'myapp/css/slick.css' %}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'myapp/css/price_rangs.css' %}">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+</head>
+
+<body class="bg-white">
+    <section class="breadcrumb breadcrumb_bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner">
+                        <div class="breadcrumb_iner_item">
+                            <p>Home / OTP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="login_part section_padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <form class="row contact_form" action="{% url 'otppage' %}" method="POST" novalidate="novalidate">
+                    {% csrf_token %}
+                    <div class="col-md-12 form-group p_star">
+                        <input type="hidden" class="form-control" id="" name="id" value="{{user.pk}}"
+                            placeholder="">
+                    </div>
+                    <div class="col-md-12 form-group p_star">
+                        <input type="text" class="form-control" id="" name="otp_text" value=""
+                            placeholder="OTP">
+                    </div>
+                    <div class="col-md-12 form-group p_star">
+
+                        <button type="submit" value="submit" class="btn_3">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'myapp/js/jquery-1.12.1.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="{% static 'myapp/js/popper.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'myapp/js/bootstrap.min.js' %}"></script>
+    <!-- easing js -->
+    <script src="{% static 'myapp/js/jquery.magnific-popup.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'myapp/js/swiper.min.js' %}"></script>
+    <!-- swiper js -->
+    
+    <!-- particles js -->
+    <script src="{% static 'myapp/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.nice-select.min.js' %}"></script>
+    <!-- slick js -->
+    <script src="{% static 'myapp/js/slick.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'myapp/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'myapp/js/contact.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.form.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'myapp/js/mail-script.js' %}"></script>
+    <script src="{% static 'myapp/js/stellar.js' %}"></script>
+    <script src="{% static 'myapp/js/price_rangs.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static 'myapp/js/custom.js' %}"></script>
+</body>
+{% if msg %}
+<script>
+	alert("{{msg}}");
+</script>
+{% endif %}
+
+</html>
+    
+    
