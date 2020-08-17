@@ -11,5 +11,10 @@ urlpatterns = [
     path('cart',views.CartPage,name="cartpage"),
     path('contact',views.ContactPage,name="contactpage"),
     path('register',views.RegisterPage,name="registerpage"),
-    path('otp',views.OtpPage,name="otppage")
+    path('otp',views.OtpPage,name="otppage"),
+    path('quantityhandle',views.QuantityhandlePage,name="quantityhandlepage"),
+    path('minusfunction',views.MinusFunction,name="minusfunction"),
+    path('plusfunction',views.PlusFunction,name="plusfunction"),
+    path('pay',views.PayPage,name="paypage"),
+    path('callback',views.CallbackPage,name="callbackpage")
 ]
